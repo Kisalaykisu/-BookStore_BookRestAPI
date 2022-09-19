@@ -1,0 +1,2 @@
+# BookStore_BookRestAPI
+Spring Boot Application​​ Create the Book model class with the jpa annotations for mapping java object to dataBookstore is a simple Java Spring Boot application to store and sell books.base table.

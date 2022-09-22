@@ -1,8 +1,8 @@
-package com.example.bookstore_book.service;
+package com.example.bookstore_bookrestapi.service;
 
-import com.example.bookstore_book.dto.BookDTO;
-import com.example.bookstore_book.dto.QuantityDTO;
-import com.example.bookstore_book.model.Book;
+import com.example.bookstore_bookrestapi.dto.BookDTO;
+import com.example.bookstore_bookrestapi.dto.QuantityDTO;
+import com.example.bookstore_bookrestapi.model.Book;
 
 import java.util.List;
 
@@ -24,4 +24,6 @@ public interface IBookService {
     List<Book> sortDescendingByPrice();
 
     String updateQuantityById(QuantityDTO quantityDTO, Long id);
+
+    Book getBookDetailsById(Long id);
 }

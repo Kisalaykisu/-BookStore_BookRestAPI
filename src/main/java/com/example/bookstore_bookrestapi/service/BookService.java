@@ -1,11 +1,11 @@
-package com.example.bookstore_book.service;
+package com.example.bookstore_bookrestapi.service;
 
-import com.example.bookstore_book.dto.BookDTO;
-import com.example.bookstore_book.dto.QuantityDTO;
-import com.example.bookstore_book.exception.BookException;
-import com.example.bookstore_book.model.Book;
-import com.example.bookstore_book.repository.BookRepo;
-import com.example.bookstore_book.utility.TokenUtility;
+import com.example.bookstore_bookrestapi.dto.BookDTO;
+import com.example.bookstore_bookrestapi.dto.QuantityDTO;
+import com.example.bookstore_bookrestapi.exception.BookException;
+import com.example.bookstore_bookrestapi.model.Book;
+import com.example.bookstore_bookrestapi.repository.BookRepo;
+import com.example.bookstore_bookrestapi.utility.TokenUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -50,6 +50,16 @@ public class BookService implements IBookService{
             return bookDetails;
         } else
             throw new BookException("ID: " + id + " is not available");
+    }
+
+    //get book details by id(Microservice check)
+    @Override
+    public Book getBookDetailsById(Long id) {
+        Book bookDetails = bookRepo.findById(id).orElse(null);
+        if (bookDetails != null) {
+            return bookDetails;
+        } else
+            return null;
     }
 
     //delete by id

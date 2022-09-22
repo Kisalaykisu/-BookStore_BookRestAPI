@@ -1,11 +1,11 @@
-package com.example.bookstore_book.controller;
+package com.example.bookstore_bookrestapi.controller;
 
-import com.example.bookstore_book.dto.BookDTO;
-import com.example.bookstore_book.dto.QuantityDTO;
-import com.example.bookstore_book.dto.ResponseDTO;
-import com.example.bookstore_book.model.Book;
-import com.example.bookstore_book.service.IBookService;
-import com.example.bookstore_book.utility.TokenUtility;
+import com.example.bookstore_bookrestapi.dto.BookDTO;
+import com.example.bookstore_bookrestapi.dto.QuantityDTO;
+import com.example.bookstore_bookrestapi.dto.ResponseDTO;
+import com.example.bookstore_bookrestapi.model.Book;
+import com.example.bookstore_bookrestapi.service.IBookService;
+import com.example.bookstore_bookrestapi.utility.TokenUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +42,13 @@ public class BookController {
         Book bookDetails = bookService.getBookDataById(id);
         ResponseDTO responseDTO = new ResponseDTO("Book details with ID: "+id,bookDetails);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+
+    //Get the book details by Book ID(Microservice check)
+    @GetMapping("/Id/{id}")
+    public Book getBookDetailsById(@PathVariable Long id) {
+        Book bookDetails = bookService.getBookDetailsById(id);
+        return bookDetails;
     }
     //Delete book details by ID
     @DeleteMapping("/delete/{id}")

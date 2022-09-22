@@ -1,4 +1,4 @@
-package com.example.bookstore_book.utility;
+package com.example.bookstore_bookrestapi.utility;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -12,7 +12,7 @@ public class EmailSenderService {
 
     public void sendEmail(String toEmail, String subject, String body ) {
         SimpleMailMessage message=new SimpleMailMessage();
-        message.setFrom("skntime0@gmail.com");
+        message.setFrom("kisalaykisu@gmail.com");
         message.setTo(toEmail);
         message.setText(body);
         message.setSubject(subject);

@@ -1,6 +1,6 @@
-package com.example.bookstore_book.exception;
+package com.example.bookstore_bookrestapi.exception;
 
-import com.example.bookstore_book.dto.ResponseDTO;
+import com.example.bookstore_bookrestapi.dto.ResponseDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

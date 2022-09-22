@@ -1,6 +1,6 @@
-package com.example.bookstore_book.model;
+package com.example.bookstore_bookrestapi.model;
 
-import com.example.bookstore_book.dto.BookDTO;
+import com.example.bookstore_bookrestapi.dto.BookDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

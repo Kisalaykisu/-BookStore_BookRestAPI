@@ -1,4 +1,4 @@
-package com.example.bookstore_book.utility;
+package com.example.bookstore_bookrestapi.utility;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

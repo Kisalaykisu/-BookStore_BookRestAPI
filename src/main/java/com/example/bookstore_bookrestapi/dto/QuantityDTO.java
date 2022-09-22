@@ -1,4 +1,4 @@
-package com.example.bookstore_book.dto;
+package com.example.bookstore_bookrestapi.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
